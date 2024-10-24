@@ -14,12 +14,12 @@ function Counter() {
     const [step, setStep] = useState(1);
     const [count, setCount] = useState(0);
 
-    function increaseStep() {
-        setStep((step) => step + 1);
-    }
-    function decreaseStep() {
-        if(step > 1) setStep((step) => step - 1);
-    }
+    // function increaseStep() {
+    //     setStep((step) => step + 1);
+    // }
+    // function decreaseStep() {
+    //     if(step > 1) setStep((step) => step - 1);
+    // }
 
     function increaseCount() {
         setCount((count) => count + step);
@@ -65,14 +65,14 @@ function Counter() {
                 {/*<div style={{margin: "12px"}}>Count : {count}</div>*/}
                 <button onClick={increaseCount}>Tambah</button>
             </div>
-            <DateComponent step={step} count={count} />
+            <DateComponent count={count} />
 
             <button onClick={handleReset}>Reset</button>
         </div>
     )
 }
 
-function DateComponent({step, count}) {
+function DateComponent({count}) {
     return (
         <>
             <div>
